@@ -1,4 +1,4 @@
-ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.PdfExport, ej.grids.Page);
+ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.Page, ej.grids.Edit, ej.grids.Filter, ej.grids.Search, ej.grids.Freeze, ej.grids.VirtualScroll);
 var grid = new ej.grids.Grid({
     dataSource: data.slice(0, 5),
     emptyRecordTemplate: '#emptytemplate',
@@ -9,8 +9,8 @@ var grid = new ej.grids.Grid({
     // height: 200,
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'],
-    // frozenColumns: 1,
-    // frozenRows: 2,
+    frozenColumns: 1,
+    frozenRows: 2,
     columns: [
         { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', width: 250, textAlign: 'Right' },
         { field: 'CustomerName', headerText: 'Customer Name', width: 250 },
