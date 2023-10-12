@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>EJ2 Grid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Typescript Grid Control">
+  <meta name="author" content="Syncfusion">
+  <link href="index.css" rel="stylesheet">
+  <link href="https://cdn.syncfusion.com/ej2/23.1.40/material.css" rel="stylesheet">
+
+  <style>
+    .e-row[aria-selected="true"] .e-customizedExpandcell {
+      background-color: #e0e0e0;
+    }
+
+    .e-grid.e-gridhover tr[role='row']:hover {
+      background-color: #eee;
+    }
+
+    .e-expand::before {
+      content: 'e5b8';
+    }
+
+    .empImage {
+      margin: 6px 16px;
+      float: left;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+  <!-- <script src="https://cdn.syncfusion.com/ej2/21.2.3/dist/ej2.min.js" type="text/javascript"></script> -->
+  <script src="ej2.js" type="text/javascript"></script>
+  <script src="./datasource.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <script id="emptyRecordTemplate" type="text/x-template">
+    <div class='emptyRecordTemplate'>
+      <h1>No records were found to display.</h1>
+      <img src="https://d2mw11xae5i0hb.cloudfront.net/assets/travel/img/norecordfound.png" style="width:100%;">
+    </div>
+  </script>
+
+  <script id="emptytemplate" type="text/x-template">
+    <span>Custom no record message</span>
+  </script>
+
+  <div id="container">
+    <div id="Grid"></div>
+  </div>
+
+  <script>
+    var ele = document.getElementById('container');
+    if (ele) {
+      ele.style.visibility = "visible";
+    }   
+  </script>
+  <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
